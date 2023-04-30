@@ -43,6 +43,7 @@ class Products with ChangeNotifier {
   }
 
   List<Product> get favorite {
+    //return ever product that has favorite true
     return _items.where((prod) => prod.isFavorite == true).toList();
   }
 

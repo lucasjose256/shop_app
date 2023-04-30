@@ -12,8 +12,10 @@ class ProductItem extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: GestureDetector(
-        onTap: () => Navigator.of(context)
-            .pushNamed(ProductDetailScreen.routeName, arguments: product.id),
+        onTap:
+            () => //pass the product id for the route, and the Product Overview uses to create the page
+                Navigator.of(context).pushNamed(ProductDetailScreen.routeName,
+                    arguments: product.id),
         child: GridTile(
           footer: GridTileBar(
             backgroundColor: Colors.black45,
